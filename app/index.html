@@ -3,14 +3,31 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>ContactListApp</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact List App</title>
+    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
+    <meta name="theme-color" content="#e24d33">
+    <meta name="description" content="An ember.js app built by Mike Bostone">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0"  />
 
     {{content-for "head"}}
 
     <link rel="stylesheet" href="assets/vendor.css">
     <link rel="stylesheet" href="assets/contact-list-app.css">
+    <link rel="stylesheet" href="assets/styles/core.css">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+      <script>
+        document.createElement('header');
+        document.createElement('nav');
+        document.createElement('main');
+        document.createElement('section');
+        document.createElement('article');
+        document.createElement('aside');
+        document.createElement('footer');
+      </script>
+    <![endif]-->
 
     {{content-for "head-footer"}}
   </head>
@@ -19,6 +36,7 @@
 
     <script src="assets/vendor.js"></script>
     <script src="assets/contact-list-app.js"></script>
+    <script src="assets/scripts/core.js"></script>
 
     {{content-for "body-footer"}}
   </body>

@@ -1,0 +1,18 @@
+<div class="icon">
+	<i class="fa fa-user"></i>
+	{{#if contact.vip}}
+	<span class="vip">Vip</span>
+	{{/if}}
+</div>
+<div class="address">
+	<ul>
+		<li>{{contact.name}}</li>
+		<li>{{contact.address1}}</li>
+		<li>{{contact.address2}}</li>
+		<li>{{contact.email}}</li>
+		<li>{{contact.phone}}</li>
+	</ul>
+</div>
+<div class="edit">
+	{{#link-to "contacts.edit" contact.id class="generic-btn"}}Edit{{/link-to}}
+</div>

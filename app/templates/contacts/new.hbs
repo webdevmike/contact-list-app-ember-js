@@ -1,0 +1,67 @@
+<main class="single-contact new">
+	<div class="content-container">
+
+		<h2>Add New Contact</h2>
+
+		{{#if success}}
+		<div class="confirmation">Success! Your new contact has been created. Click {{#link-to "contacts"}}here{{/link-to}} to view all contacts.</div>
+		{{/if}}
+
+		{{#unless success}}
+
+		<div class="contact-info">
+			<form>
+				<div class="row">
+					<label>Name:</label>
+					{{input type="text" name="name" autocomplete="off" value=name}}
+				</div>
+				<div class="row">
+					<label>Address:</label>
+					{{input type="text" name="address1" autocomplete="off" value=address1}}
+				</div>
+				<div class="row">
+					{{input type="text" name="address2" autocomplete="off" value=address2}}
+				</div>
+				<div class="row">
+					<label>Email:</label>
+					{{input type="email" name="email" autocomplete="off" value=email}}
+				</div>
+				<div class="row">
+					<label>Phone:</label>
+					{{input type="text" name="phone" autocomplete="off" value=phone}}
+				</div>
+				<div class="row vip">
+					<label>
+						{{input type="checkbox" name="vip" checked=vip}}
+						<span>This is a VIP contact</span>
+					</label>
+				</div>
+			</form>
+
+			<div class="actions">
+				<button type="button" class="generic-btn" {{action "saveContact"}}>Add Contact</button>
+			</div>
+		</div>
+
+		<div class="contact-preview">
+			<div class="icon">
+				<i class="fa fa-user"></i>
+				{{#if vip}}
+				<span class="vip">Vip</span>
+				{{/if}}
+			</div>
+			<div class="address">
+				<ul>
+					<li>{{name}}</li>
+					<li>{{address1}}</li>
+					<li>{{address2}}</li>
+					<li>{{email}}</li>
+					<li>{{phone}}</li>
+				</ul>
+			</div>
+		</div>
+
+		{{/unless}}
+
+	</div>
+</main>

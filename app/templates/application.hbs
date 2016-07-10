@@ -1,0 +1,29 @@
+<header>
+	<div class="content-container">
+		
+		<div class="logo">
+			<i class="fa fa-users"></i>
+			<h1>{{#link-to 'index'}}Contact List app{{/link-to}}</h1>
+		</div>
+
+		<nav>
+			<div class="hamburger-icon">
+				<i class="fa fa-bars"></i>
+			</div>
+			<ul class="main-nav">
+				<li>{{#link-to 'index'}}Home{{/link-to}}</li>
+				<li>{{#link-to 'contacts.new'}}Add New Contact{{/link-to}}</li>
+				<li>{{#link-to 'contacts.index'}}View All Contacts{{/link-to}}</li>
+			</ul>
+		</nav>
+
+	</div>
+</header>
+
+{{outlet}}
+
+<footer>
+	<div class="content-container">
+		<div class="note">An ember.js app built by Mike Bostone</div>
+	</div>
+</footer>

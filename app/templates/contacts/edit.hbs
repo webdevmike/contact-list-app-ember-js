@@ -1,0 +1,60 @@
+<main class="single-contact edit">
+	<div class="content-container">
+
+		<h2>Edit Contact</h2>
+
+		<div class="contact-info">
+			<form>
+				<div class="row">
+					<label>Name:</label>
+					{{input type="text" name="name" autocomplete="off" value=model.name}}
+				</div>
+				<div class="row">
+					<label>Address:</label>
+					{{input type="text" name="address1" autocomplete="off" value=model.address1}}
+				</div>
+				<div class="row">
+					{{input type="text" name="address2" autocomplete="off" value=model.address2}}
+				</div>
+				<div class="row">
+					<label>Email:</label>
+					{{input type="email" name="email" autocomplete="off" value=model.email}}
+				</div>
+				<div class="row">
+					<label>Phone:</label>
+					{{input type="text" name="phone" autocomplete="off" value=model.phone}}
+				</div>
+				<div class="row vip">
+					<label>
+						{{input type="checkbox" name="vip" checked=model.vip}}
+						<span>This is a VIP contact</span>
+					</label>
+				</div>
+			</form>
+
+			<div class="actions">
+				<button type="button" class="generic-btn" {{action "saveContact" model}}>Update</button>
+				<div class="delete"><a {{action "deleteContact" model}}>Delete</a></div>
+			</div>
+		</div>
+
+		<div class="contact-preview">
+			<div class="icon">
+				<i class="fa fa-user"></i>
+				{{#if model.vip}}
+				<span class="vip">Vip</span>
+				{{/if}}
+			</div>
+			<div class="address">
+				<ul>
+					<li>{{model.name}}</li>
+					<li>{{model.address1}}</li>
+					<li>{{model.address2}}</li>
+					<li>{{model.email}}</li>
+					<li>{{model.phone}}</li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+</main>

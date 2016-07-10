@@ -1,0 +1,19 @@
+<main class="contacts">
+	<div class="content-container">
+
+		<h2>All Contacts</h2>
+
+		{{#unless model.length}}
+		<div class="empty">You have no contacts yet.</div>
+		{{/unless}}
+
+		{{#if model.length}}
+		<ul class="contact-list">
+			{{#each model as |contact|}}
+				{{individual-contact contact=contact}}
+			{{/each}}
+		</ul>
+		{{/if}}
+
+	</div>
+</main>

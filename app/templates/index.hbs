@@ -1,0 +1,30 @@
+<main class="home">
+	<div class="content-container">
+
+		<ul class="home-nav">
+			<li>
+				{{#link-to "contacts.new" class="generic-btn"}}Add New Contact{{/link-to}}
+			</li>
+			<li>-or-</li>
+			<li>
+				{{#link-to "contacts" class="generic-btn"}}View All Contacts{{/link-to}}
+			</li>
+		</ul>
+
+		<div class="vip-contacts">
+			<h2>VIP Contacts</h2>
+			{{#unless model.length}}
+			<div class="empty">You have no VIP contacts yet.</div>
+			{{/unless}}
+
+			{{#if model.length}}
+			<ul class="contact-list">
+				{{#each model as |contact|}}
+					{{individual-contact contact=contact}}
+				{{/each}}
+			</ul>
+			{{/if}}
+		</div>
+
+	</div>
+</main>
