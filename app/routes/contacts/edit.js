@@ -5,7 +5,12 @@ export default Ember.Route.extend({
 	actions: {
 
 		saveContact(contact) {
-			contact.save().then(() => this.transitionTo('contacts'));
+			var name = this.controller.get('model').get('name');
+			if(name.length > 0) {
+				contact.save().then(() => this.transitionTo('contacts'));
+			} else {
+				alert('Please enter a name.');
+			}
 		},
 
 		willTransition(transition) {

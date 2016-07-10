@@ -10,6 +10,8 @@ Router.map(function() {
   	this.route('new');
     this.route('edit', { path: '/:contact_id/edit' });
   });
+  //this.route('404');
+  this.route('404', { path: '*:'});
 });
 
 export default Router;
