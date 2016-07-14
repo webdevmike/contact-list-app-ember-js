@@ -1,7 +1,5 @@
 export default function() {
- // this.get('/contacts');
   this.get('/contacts', (schema, request) => {
-    //console.log(request.queryParams);
     return schema.contacts.where(request.queryParams);
   });
   this.get('/contacts/:id');

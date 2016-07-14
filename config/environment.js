@@ -4,7 +4,7 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'contact-list-app',
     environment: environment,
-    baseURL: '/',
+    baseURL: '/projects/contact-list-app',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
